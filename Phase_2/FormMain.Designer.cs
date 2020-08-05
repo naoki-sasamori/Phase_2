@@ -1,6 +1,6 @@
 ﻿namespace Phase_2
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -323,7 +323,7 @@
             this.trackBarBlue.Name = "trackBarBlue";
             this.trackBarBlue.Size = new System.Drawing.Size(245, 45);
             this.trackBarBlue.TabIndex = 8;
-            this.trackBarBlue.Scroll += new System.EventHandler(this.trackBarBlue_Scroll);
+            this.trackBarBlue.Scroll += new System.EventHandler(this.trackBarCommon_Scroll);
             // 
             // trackBarGreen
             // 
@@ -332,7 +332,7 @@
             this.trackBarGreen.Name = "trackBarGreen";
             this.trackBarGreen.Size = new System.Drawing.Size(245, 45);
             this.trackBarGreen.TabIndex = 7;
-            this.trackBarGreen.Scroll += new System.EventHandler(this.trackBarGreen_Scroll);
+            this.trackBarGreen.Scroll += new System.EventHandler(this.trackBarCommon_Scroll);
             // 
             // trackBarRed
             // 
@@ -341,7 +341,7 @@
             this.trackBarRed.Name = "trackBarRed";
             this.trackBarRed.Size = new System.Drawing.Size(245, 45);
             this.trackBarRed.TabIndex = 6;
-            this.trackBarRed.Scroll += new System.EventHandler(this.trackBarRed_Scroll);
+            this.trackBarRed.Scroll += new System.EventHandler(this.trackBarCommon_Scroll);
             // 
             // Form1
             // 

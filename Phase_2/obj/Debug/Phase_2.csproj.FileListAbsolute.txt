@@ -12,11 +12,10 @@ C:\Users\10206\source\repos\Phase_2\Phase_2\obj\Debug\Phase_2.pdb
 C:\Users\10206\git\Phase_2\Phase_2\bin\Debug\Phase_2.exe.config
 C:\Users\10206\git\Phase_2\Phase_2\bin\Debug\Phase_2.exe
 C:\Users\10206\git\Phase_2\Phase_2\bin\Debug\Phase_2.pdb
-C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.csprojAssemblyReference.cache
-C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.Form1.resources
-C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.Form2.resources
 C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.Properties.Resources.resources
 C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.csproj.GenerateResource.cache
 C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.csproj.CoreCompileInputs.cache
 C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.exe
 C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.pdb
+C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.FormMain.resources
+C:\Users\10206\git\Phase_2\Phase_2\obj\Debug\Phase_2.FormChild.resources

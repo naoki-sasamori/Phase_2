@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Phase_2
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        Form2 form2 = new Form2();
+        FormChild formChild = new FormChild();
 
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
 
@@ -32,8 +32,8 @@ namespace Phase_2
 
             // 各トラックバーの初期値表示
             labelMove.Text          = trackBarMove.Value.ToString();
-            labelWidth.Text         = trackBarWidth.Value.ToString();
-            labelHeight.Text        = trackBarHeight.Value.ToString();
+            labelWidth.Text         = formChild.Width.ToString();
+            labelHeight.Text        = formChild.Height.ToString();
             labelRed.Text           = trackBarRed.Value.ToString();
             labelGreen.Text         = trackBarGreen.Value.ToString();
             labelBlue.Text          = trackBarBlue.Value.ToString();
@@ -44,16 +44,14 @@ namespace Phase_2
         // ----------「子ウィンドウ表示」チェックボックス
         private void checkBoxShow_CheckedChanged(object sender, EventArgs e)
         {
-            //Form2 form2 = new Form2();
-
             // オン／オフにより子ウィンドウの表示／非表示を切り替え
             if (checkBoxShow.Checked)
             {
-                form2.Show();
+                formChild.Show();
             }
             else
             {
-                form2.Hide();
+                formChild.Hide();
             }
         }
 
@@ -70,7 +68,7 @@ namespace Phase_2
             labelWidth.Text = trackBarWidth.Value.ToString();
 
             // 子フォームの幅変更
-            form2.Width = trackBarWidth.Value;
+            formChild.Width = trackBarWidth.Value;
         }
 
         // ----------「高」トラックバー
@@ -80,68 +78,50 @@ namespace Phase_2
             labelHeight.Text = trackBarHeight.Value.ToString();
 
             // 子フォームの高変更
-            form2.Height = trackBarHeight.Value;
+            formChild.Height = trackBarHeight.Value;
         }
 
-        // ----------「R」トラックバー
-        private void trackBarRed_Scroll(object sender, EventArgs e)
+        // ----------「R」／「G」／「B」トラックバー
+        private void trackBarCommon_Scroll(object sender, EventArgs e)
         {
             // 値表示
             labelRed.Text = trackBarRed.Value.ToString();
-
-            // 子フォームの背景色変更
-            form2.BackColor = Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
-        }
-
-        // ----------「G」トラックバー
-        private void trackBarGreen_Scroll(object sender, EventArgs e)
-        {
-            // 値表示
             labelGreen.Text = trackBarGreen.Value.ToString();
-
-            // 子フォームの背景色変更
-            form2.BackColor = Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
-        }
-
-        // ----------「B」トラックバー
-        private void trackBarBlue_Scroll(object sender, EventArgs e)
-        {
-            // 値表示
             labelBlue.Text = trackBarBlue.Value.ToString();
 
             // 子フォームの背景色変更
-            form2.BackColor = Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
+            formChild.BackColor = Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
         }
 
         // ----------「↑」ボタン
         private void buttonUp_Click(object sender, EventArgs e)
         {
-            form2.Top -= trackBarMove.Value;
+            formChild.Top -= trackBarMove.Value;
         }
 
         // ----------「→」ボタン
         private void buttonRight_Click(object sender, EventArgs e)
         {
-            form2.Left += trackBarMove.Value;
+            formChild.Left += trackBarMove.Value;
         }
 
         // ----------「↓」ボタン
         private void buttonDown_Click(object sender, EventArgs e)
         {
-            form2.Top += trackBarMove.Value;
+            formChild.Top += trackBarMove.Value;
         }
 
         // ----------「←」ボタン
         private void buttonLeft_Click(object sender, EventArgs e)
         {
-            form2.Left -= trackBarMove.Value;
+            formChild.Left -= trackBarMove.Value;
         }
 
         // ----------「〇」ボタン
         private void buttonCenter_Click(object sender, EventArgs e)
         {
-            form2.Left  = (Screen.PrimaryScreen.Bounds.Width - form2.Width) / 2;
-            form2.Top   = (Screen.PrimaryScreen.Bounds.Height - form2.Height) / 2;
+            formChild.Left  = (Screen.PrimaryScreen.Bounds.Width - formChild.Width) / 2;
+            formChild.Top   = (Screen.PrimaryScreen.Bounds.Height - formChild.Height) / 2;
         }
     }
 }
